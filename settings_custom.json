@@ -1,0 +1,42 @@
+[
+    {
+        "type": "title",
+        "title": "Background Color"
+    },
+    {
+        "type": "numeric",
+        "title": "Red(0~255)",
+        "desc": "strength of red color",
+        "section": "section1",
+        "key": "red"
+    },
+    {
+        "type": "numeric",
+        "title": "Green(0~255)",
+        "desc": "strength of green color",
+        "section": "section1",
+        "key": "green"
+    },
+    {
+        "type": "numeric",
+        "title": "Blue(0~255)",
+        "desc": "strength of blue color",
+        "section": "section1",
+        "key": "blue"
+    },
+    {
+        "type": "title",
+        "title": "Profile picture"
+    },
+    {
+        "type": "options",
+        "title": "top picture",
+        "desc": "choose profile picture",
+        "section": "section1",
+        "key": "topPicutre",
+        "options": [
+            "test.jpg",
+            "test2.jpg"
+        ]
+    }
+]

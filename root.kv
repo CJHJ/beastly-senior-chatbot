@@ -1,0 +1,94 @@
+
+
+<Chat>:
+    # This are attributes of the class Chat now
+
+    # access widgets in kv file with id
+    a: _a
+    container: _container
+
+
+    ScreenManager:
+        size_hint: 1, 1
+        id: _screen_manager
+        Screen:
+            name: 'chat'
+            ScrollView:
+                size_hint: None, None
+                size: root.width*0.95, root.height*0.75
+                pos_hint: {'center_x': .5, 'center_y': .6}
+                GridLayout:
+                    id: _container
+                    cols: 2
+                    # padding: 10
+                    spacing: 30
+                    size_hint_y: None
+                    height: self.minimum_height
+
+                    # display First question from yajuusenpai
+                    Image:
+                        source: 'icon.jpg'
+                        size_hint_x: 0.1
+                    Button:
+                        text: "\u3042\u306a\u305f\u306f\u8ab0\u003f"
+                        font_name: 'TakaoPMincho.ttf'
+                        color: 0,0,0,1
+                        size_hint_y: None
+                        background_color: 255,255,255,255
+                    Label:
+                        text: "\u91ce\u7363\u5148\u8f29"
+                        font_name: 'TakaoPMincho.ttf'
+                        color: 0,0,0,1
+                        size_hint_x: 0.1
+                        font_size: 15
+                    # empty label
+                    Label:
+                        text: ""
+
+            GridLayout:
+                TextInput:
+                    id: _a
+                    # font_name:"DroidSansJapanese.ttf"
+                    font_name: 'TakaoPMincho.ttf'
+                    hint_text: "Let's talk!"
+                    font_size: 30
+                    x: (0)
+                    center_y: (root.height*0.15)
+                    size: root.width*0.7,70
+
+                    # put focus or not
+                    focus: True
+                    on_text_validate: _a.focus=True
+
+                Button:
+                    font_size: 50
+                    x: (root.width-root.width*0.3)
+                    center_y: (root.height*0.15)
+                    size: root.width*0.3,70
+                    # top: root.top-180
+                    text: 'send'
+
+                    # if send Button pressed, clear Textbox
+                    on_press:
+                        _a.focus=True
+                        root.sentText(*args)
+                        root.reload(); _a.text=''
+
+
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'bottom'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1, .1
+            Button:
+                text: 'Chat'
+                on_press:
+                    _screen_manager.transition.direction = 'right'
+                    _screen_manager.current = 'chat'
+            Button:
+                text: 'Setting'
+                on_press:
+                    # _screen_manager.transition.direction = 'left'
+                    # _screen_manager.current = 'settingScreen'
+                on_release: app.open_settings()
