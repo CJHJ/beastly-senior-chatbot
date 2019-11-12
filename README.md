@@ -1,4 +1,4 @@
-# The Lost Panda
+# Beastly Senior Chatbot 
 
 ## Description
 
@@ -25,11 +25,11 @@ As this project is no longer being maintained since its conceivement in 2016, yo
 
 ## Authors
 
-Calvin Janitra Halim
+Calvin Janitra Halim  
 Hayate Nakayama
 
 ## Corpus
-The names are hidden due privacy reasons.
+The names are hidden due privacy reasons.  
 KBTK  
 TSHT
 
