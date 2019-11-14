@@ -2,7 +2,7 @@
 
 ## Description
 
-A Japanese chatbot app with voice (provided by a willing volunteer, bless him), built with the titular controversial character in the Japanese meme world as the main image.
+A Japanese chatbot app with voice (provided by a willing volunteer, bless him), built in the image of the titular controversial character in the Japanese meme world.
 
 ## Requirements
 
